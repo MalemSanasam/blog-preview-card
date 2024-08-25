@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root{
+  --Yellow: hsl(47, 88%, 63%);
+  --White: hsl(0, 0%, 100%) ;
+  --Gray-500: hsl(0, 0%, 42%);
+  --Gray-950: hsl(0, 0%, 7%);
+
+  /* font-weight */
+  --Weight-500: 500;
+  --weight-800: 800;
+
+  /* image width */
+  --cover-image-width: 100%;
+  --author-image-width: 2.188em;
+
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+  font-family: "Figtree", sans-serif;
+  background-color: var(--Yellow);
+}
+
+.container,
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  border: 2px solid var(--Gray-950);
+  border-radius: 20px;
+  padding: 1em;
+  box-shadow: 5px 5px var(--Gray-950);
+  width: 90%;
+  background-color: var(--White);
+  max-width: 25.5em;
+  min-width: 10.5em;
+}
+
+.main,
+.profile-layout{
+  display: flex;
+  flex-direction: column;
+}
+
+.cover-picture{
+  width: var(--cover-image-width);
+  order: -9;
+  border-radius: 10px;
+  margin-bottom: 1.5em;
+}
+
+.sort-name{
+  background-color: var(--Yellow);
+  font-weight: var(--weight-800);
+  width: max-content;
+  padding: .2em .6em;
+  border-radius: 6px;
+  order: -8;
+  margin-bottom: .8em;
+}
+.published-date{
+  color: var(--Gray-950);
+  font-weight: var(--Weight-500);
+  order: -7;
+  margin-bottom: 1em;
+}
+
+.title{
+  cursor: pointer;
+  transition: color .2s ease-in-out;
+}
+.title:hover{
+  color: var(--Yellow);
+}
+
+.description{
+  color: var(--Gray-500);
+  margin: 1.5em 0;
+}
+
+.profile-layout{
+  flex-direction: row;
+  justify-content: start;
+  width: 100%;
+  margin-bottom: .6em;
+}
+
+.author-profile{
+  width: var(--author-image-width);
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  order: -1;
+  border-radius: 50%;
+  margin-right: .6em;
+}
+
+.author-name{
+  font-weight: var(--weight-800);
+  transform: translateY(25%);
+}
+
+.attribution { 
+  font-size: 11px;
+  text-align: center; 
+  margin-top: 1em;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
